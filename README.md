@@ -1,36 +1,133 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CaterSmart - Catering Management System
+
+A modern, full-stack catering management system built with Next.js 14+, TypeScript, and Tailwind CSS.
+
+## Features
+
+- 🎨 Modern, responsive UI with Tailwind CSS
+- 📦 Browse and customize catering packages
+- 🍽️ Comprehensive menu management
+- 🛒 Shopping cart with real-time pricing
+- 💳 Secure checkout process
+- 👤 User authentication and account management
+- 📱 Mobile-first responsive design
+- 🔍 Advanced filtering and search
+- ⭐ Reviews and ratings system
+- 📊 Admin dashboard for management
+
+## Tech Stack
+
+- **Framework:** Next.js 14+ (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Database:** PostgreSQL (via Supabase)
+- **Authentication:** NextAuth.js
+- **Payment:** Stripe
+- **Email:** Nodemailer
+- **Deployment:** Vercel
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ 
+- npm or yarn
+- PostgreSQL database
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/catering-smart-system.git
+cd catering-smart-system
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Edit `.env.local` with your configuration values.
 
-## Learn More
+4. Run database migrations:
+```bash
+npm run db:migrate
+```
 
-To learn more about Next.js, take a look at the following resources:
+5. Seed the database (optional):
+```bash
+npm run db:seed
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+6. Start the development server:
+```bash
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+├── app/              # Next.js App Router pages
+├── components/       # React components
+│   ├── layout/      # Layout components
+│   ├── home/        # Home page components
+│   ├── ui/          # Reusable UI components
+│   └── shared/      # Shared components
+├── lib/             # Utility functions
+├── hooks/           # Custom React hooks
+├── types/           # TypeScript types
+├── services/        # Business logic
+└── context/         # React Context providers
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See [PROJECT-STRUCTURE.md](./PROJECT-STRUCTURE.md) for detailed documentation.
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript compiler check
+
+## Documentation
+
+- [Sitemap](./SITEMAP.md) - Website structure
+- [User Flow](./USER-FLOW.md) - User journey documentation
+- [Database Schema](./DATABASE-SCHEMA.md) - Database structure
+- [API Documentation](./API-DOCUMENTATION.md) - API endpoints
+- [Project Structure](./PROJECT-STRUCTURE.md) - Folder organization
+
+## Features Roadmap
+
+- [x] Landing page
+- [x] Package browsing
+- [ ] Package customization
+- [ ] Shopping cart
+- [ ] Checkout process
+- [ ] User authentication
+- [ ] Order management
+- [ ] Admin dashboard
+- [ ] Payment integration
+- [ ] Email notifications
+- [ ] Reviews system
+
+## Contributing
+
+Contributions are welcome! Please read our contributing guidelines before submitting PRs.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For questions or support, contact us at hello@catersmart.com
